@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<title>Samir Lavingia</title>
+		<link rel="stylesheet" type="text/css" href="theme.css"/>
+		<link rel="shortcut icon" href="images/icon.ico">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		
+		<script>
+		
+		function preload(srcs) 
+		{
+		    if (!preloadImages.cache) {
+		        preloadImages.cache = [];
+		    }
+		    var img;
+		    for (var i = 0; i < srcs.length; i++) {
+		        img = new Image();
+		        img.src = srcs[i];
+		        preloadImages.cache.push(img);
+		    }
+		}
+		
+		$(document).ready(function(){
+		    preload([
+			    'images/githubBlue.png',
+			    'images/githubGrey.png',
+			    'images/gmailGrey.png',
+				'images/gmailRed.png',
+				'images/linkedinBlue.png',
+				'images/linkedinGrey.png',
+				'images/samir.jpg',
+				'images/twitterIconGrey.png',
+				'images/twitterIconBlue.png'
+			]); 
+		});
+		
+		$(window).load(function(){
+			
+			$("#twitterTable").mouseover(function(){
+		         $("#linkedin").css("background-image", "url('images/linkedinGrey.png')");
+		         $("#email").css("background-image", "url('images/gmailGrey.png')");
+		         $("#github").css("background-image", "url('images/githubGrey.png')");
+		     });
+		
+			 $("#twitterTable").mouseout(function(){
+		         $("#linkedin").css("background-image", "url('images/linkedinBlue.png')");
+		         $("#email").css("background-image", "url('images/gmailRed.png')");
+		         $("#github").css("background-image", "url('images/githubBlue.png')");		    
+			});
+			
+			$("#linkedinTable").mouseover(function(){
+		         $("#twitter").css("background-image", "url('images/twitterIconGrey.png')");
+		         $("#email").css("background-image", "url('images/gmailGrey.png')");
+		         $("#github").css("background-image", "url('images/githubGrey.png')");
+		     });
+		
+			 $("#linkedinTable").mouseout(function(){
+		         $("#twitter").css("background-image", "url('images/twitterIconBlue.png')");
+		         $("#email").css("background-image", "url('images/gmailRed.png')");
+		         $("#github").css("background-image", "url('images/githubBlue.png')");		    
+			});
+			
+			$("#emailTable").mouseover(function(){
+		         $("#linkedin").css("background-image", "url('images/linkedinGrey.png')");
+		         $("#twitter").css("background-image", "url('images/twitterIconGrey.png')");
+		         $("#github").css("background-image", "url('images/githubGrey.png')");
+		     });
+		
+			 $("#emailTable").mouseout(function(){
+		         $("#linkedin").css("background-image", "url('images/linkedinBlue.png')");
+		         $("#twitter").css("background-image", "url('images/twitterIconBlue.png')");
+		         $("#github").css("background-image", "url('images/githubBlue.png')");		    
+			});
+			
+			$("#githubTable").mouseover(function(){
+		         $("#linkedin").css("background-image", "url('images/linkedinGrey.png')");
+		         $("#email").css("background-image", "url('images/gmailGrey.png')");
+		         $("#twitter").css("background-image", "url('images/twitterIconGrey.png')");
+		     });
+		
+			 $("#githubTable").mouseout(function(){
+		         $("#linkedin").css("background-image", "url('images/linkedinBlue.png')");
+		         $("#email").css("background-image", "url('images/gmailRed.png')");
+		         $("#twitter").css("background-image", "url('images/twitterIconBlue.png')");		    
+			});
+		});
+		</script>	
+
+	</head>
+
+	<body>
+		<img src="images/samir.jpg" alt="Me!" class="rounded" id="me"/>
+		<h1>Samir Lavingia</h1>
+		<h2>Computer Science : USC 2016</h2>
+		
+		<table>
+		<tr>
+			<td id="twitterTable" onClick="document.location.href='http://twitter.com/lavingiasa';" ><div id="twitter" class="icon"></div></td>
+			<td id="emailTable" onClick="document.location.href='mailto:lavingiasa@gmail.com';"><div id="email" class="icon"></div></td>
+			<td id="linkedinTable" onClick="document.location.href='http://linkedin.com/in/lavingiasa';"><div id="linkedin" class="icon"></div></td>
+			<td id="githubTable" onClick="document.location.href='http://github.com/lavingiasa';"><div id="github" class="icon"></div></td>
+		</tr>
+		</table>
+		
+		
+		
+		
+	</body>
+</html>
